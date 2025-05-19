@@ -1,0 +1,13 @@
+from Inmueble import Inmueble
+
+class InmuebleVivienda(Inmueble):
+    def __init__(self, identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos):
+        super().__init__(identificadorInmobiliario, area, direccion)
+        self.numeroHabitaciones = numeroHabitaciones
+        self.numeroBanos = numeroBanos
+
+
+    def imprimir(self):
+        super().imprimir()
+        print(f"Numero de habitaciones = {self.numeroHabitaciones}")
+        print(f"Numero de banos = {self.numeroBanos}")

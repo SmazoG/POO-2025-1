@@ -1,0 +1,2 @@
+from GatoPeloLargo import *
+class Himalayo(GatoPeloLargo): pass

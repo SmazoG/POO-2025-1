@@ -1,0 +1,2 @@
+from GatoSinPelo import *
+class Elfo(GatoSinPelo): pass

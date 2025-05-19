@@ -1,0 +1,28 @@
+class Cuenta:
+    def __init__(self, saldo: float, tasaAnual: float):
+        self.saldo = saldo
+        self.numeroConsignaciones = 0
+        self.numeroRetiros = 0
+        self.tasaAnual = tasaAnual
+        self.comisionMensual = 0.0
+
+    def consignar(self, cantidad: float):
+        self.saldo += cantidad
+        self.numeroConsignaciones += 1
+
+    def retirar(self, cantidad: float):
+        nuevo_saldo = self.saldo - cantidad
+        if nuevo_saldo >= 0:
+            self.saldo -= cantidad
+            self.numeroRetiros += 1
+        else:
+            print("La cantidad a retirar excede el saldo actual.")
+
+    def calcularInteres(self):
+        tasa_mensual = self.tasaAnual / 12
+        interes_mensual = self.saldo * tasa_mensual
+        self.saldo += interes_mensual
+
+    def extractoMensual(self):
+        self.saldo -= self.comisionMensual
+        self.calcularInteres()

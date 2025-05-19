@@ -1,0 +1,3 @@
+from PerroPequeno import *
+
+class YorkshireTerrier(PerroPequeno): pass

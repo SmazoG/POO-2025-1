@@ -1,0 +1,13 @@
+from CasaUrbana import *
+
+class CasaIndependiente(CasaUrbana):
+    valorArea = 3000000
+
+
+    def __init__(self, identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos, numeroPisos):
+        super().__init__(identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos, numeroPisos)
+
+
+    def imprimir(self):
+        super().imprimir()
+        print()

@@ -1,0 +1,34 @@
+class CuentaCorriente(Cuenta):
+    def __init__(self, saldo: float, tasa: float):
+        super().__init__(saldo, tasa)
+        self.sobregiro = 0.0
+
+    def retirar(self, cantidad: float):
+        resultado = self.saldo - cantidad
+        if resultado < 0:
+            self.sobregiro -= resultado
+            self.saldo = 0
+        else:
+            super().retirar(cantidad)
+
+    def consignar(self, cantidad: float):
+        residuo = self.sobregiro - cantidad
+        if self.sobregiro > 0:
+            if residuo > 0:
+                self.sobregiro = 0
+                self.saldo = residuo
+            else:
+                self.sobregiro = -residuo
+                self.saldo = 0
+        else:
+            super().consignar(cantidad)
+
+    def extractoMensual(self):
+        super().extractoMensual()
+
+    def imprimir(self):
+        print(f"Saldo = $ {self.saldo}")
+        print(f"Cargo mensual = $ {self.comisionMensual}")
+        print(f"Numero de transacciones = {self.numeroConsignaciones + self.numeroRetiros}")
+        print(f"Valor de sogregiro = $ {self.sobregiro}")
+        print()

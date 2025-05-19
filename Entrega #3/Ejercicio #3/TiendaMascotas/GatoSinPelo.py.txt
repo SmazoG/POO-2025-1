@@ -1,0 +1,2 @@
+from Gato import *
+class GatoSinPelo(Gato): pass

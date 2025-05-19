@@ -1,0 +1,17 @@
+from Inmueble import *
+from enum import Enum
+
+
+class TipoLocal(Enum):
+    INTERNO = 1
+    CALLE = 2
+
+class Local(Inmueble):
+    def __init__(self, identificadorInmobiliario, area, direccion, tipoLocal):
+        super().__init__(identificadorInmobiliario, area, direccion)
+        self.tipoLocal = tipoLocal
+
+
+    def imprimir(self):
+        super().imprimir()
+        print(f"Tipo de local = {self.tipoLocal}")

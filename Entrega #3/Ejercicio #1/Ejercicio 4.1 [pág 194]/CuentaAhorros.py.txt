@@ -1,0 +1,28 @@
+from Cuenta import *
+
+class CuentaAhorros(Cuenta):
+    def __init__(self, saldo: float, tasa: float):
+        super().__init__(saldo, tasa)
+        self.activa = True if saldo >= 10000 else False
+
+    def retirar(self, cantidad: float):
+        if self.activa:
+            super().retirar(cantidad)
+
+    def consignar(self, cantidad: float):
+        if self.activa:
+            super().consignar(cantidad)
+
+    def extractoMensual(self):
+        if self.numeroRetiros > 4:
+            self.comisionMensual += (self.numeroRetiros - 4) * 1000
+        super().extractoMensual()
+        if self.saldo < 10000:
+            self.activa = False
+
+    def imprimir(self):
+        print(f"Saldo = $ {self.saldo}")
+        print(f"Comision mensual = $ {self.comisionMensual}")
+        print(f"Numero de transacciones = {self.numeroConsignaciones + self.numeroRetiros}")
+        print()
+

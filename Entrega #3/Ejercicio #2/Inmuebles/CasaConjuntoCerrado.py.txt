@@ -1,0 +1,19 @@
+from CasaUrbana import *
+
+class CasaConjuntoCerrado(CasaUrbana):
+    valorArea = 2500000
+
+
+    def __init__(self, identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos, numeroPisos, valorAdministracion, tienePiscina, tieneCamposDeportivos):
+        super().__init__(identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos, numeroPisos)
+        self.valorAdministracion = valorAdministracion
+        self.tienePiscina = tienePiscina
+        self.tieneCamposDeportivos = tieneCamposDeportivos
+
+
+    def imprimir(self):
+        super().imprimir()
+        print(f"Valor de la administracion = {self.valorAdministracion}")
+        print(f"Tiene piscina? = {self.tienePiscina}")
+        print(f"Tiene campos deportivos? = {self.tieneCamposDeportivos}")
+        print()

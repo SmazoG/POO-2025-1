@@ -1,0 +1,2 @@
+from GatoPeloLargo import *
+class Somali(GatoPeloLargo): pass

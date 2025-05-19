@@ -1,0 +1,5 @@
+from ProfesorTitular import *
+
+if __name__ == "__main__":
+    profesor1 = ProfesorTitular()
+    profesor1.imprimir()

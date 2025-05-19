@@ -1,0 +1,2 @@
+from PerroMediano import *
+class Collie(PerroMediano): pass

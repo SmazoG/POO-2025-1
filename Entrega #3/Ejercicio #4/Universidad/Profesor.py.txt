@@ -1,0 +1,19 @@
+from Persona import *
+
+class Profesor(Persona):
+    def __init__(self, nombre, direccion, departamento, categoria):
+        super().__init__(nombre, direccion)
+        self.departamento = departamento
+        self.categoria = categoria
+   
+    def getDepartamento(self):
+        return self.departamento
+   
+    def getCategoria(self):
+        return self.categoria
+   
+    def setDepartamento(self, departamento):
+        self.departamento = departamento
+   
+    def setCategoria(self, categoria):
+        self.categoria = categoria

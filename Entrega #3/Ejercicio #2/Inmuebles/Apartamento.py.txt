@@ -1,0 +1,9 @@
+from InmuebleVivienda import *
+
+class Apartamento(InmuebleVivienda):
+    def __init__(self, identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos):
+        super().__init__(identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos)
+
+
+    def imprimir(self):
+        super().imprimir()

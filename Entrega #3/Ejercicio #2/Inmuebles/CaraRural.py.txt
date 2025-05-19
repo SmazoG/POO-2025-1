@@ -1,0 +1,17 @@
+from Casa import *
+
+class CasaRural(Casa):
+    valorArea = 1500000
+
+
+    def __init__(self, identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos, numeroPisos, distanciaCabera, altitud):
+        super().__init__(identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos, numeroPisos)
+        self.distanciaCabera = distanciaCabera
+        self.altitud = altitud
+
+
+    def imprimir(self):
+        super().imprimir()
+        print(f"Distancia la cabecera municipal = {self.numeroHabitaciones} km.")
+        print(f"Altitud sobre el nivel del mar = {self.altitud} metros.")
+        print()

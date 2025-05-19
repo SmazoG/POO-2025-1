@@ -1,0 +1,13 @@
+from CuentaAhorros import *
+
+if __name__ == "__main__":
+    print("Cuenta de ahorros")
+    saldo_inicial = float(input("Ingrese saldo inicial = $"))
+    tasa = float(input("Ingrese tasa de interes = "))
+    cuenta1 = CuentaAhorros(saldo_inicial, tasa)
+    dep = float(input("Ingresar cantidad a consignar: $"))
+    cuenta1.consignar(dep)
+    ret = float(input("Ingresar cantidad a retirar: $"))
+    cuenta1.retirar(ret)
+    cuenta1.extractoMensual()
+    cuenta1.imprimir()

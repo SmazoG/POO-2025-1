@@ -1,0 +1,2 @@
+from GatoPeloCorto import *
+class Britanico(GatoPeloCorto): pass

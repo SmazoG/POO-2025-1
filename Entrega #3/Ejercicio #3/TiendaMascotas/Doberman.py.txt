@@ -1,0 +1,2 @@
+from PerroGrande import *
+class Doberman(PerroGrande): pass

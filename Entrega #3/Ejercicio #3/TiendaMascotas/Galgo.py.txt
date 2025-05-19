@@ -1,0 +1,2 @@
+from PerroMediano import *
+class Galgo(PerroMediano): pass

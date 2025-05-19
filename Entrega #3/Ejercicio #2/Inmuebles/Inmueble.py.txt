@@ -1,0 +1,18 @@
+class Inmueble:
+    def __init__(self, identificadorInmobiliario, area, direccion):
+        self.identificadorInmobiliario = identificadorInmobiliario
+        self.area = area
+        self.direccion = direccion
+        self.precioVenta = 0.0
+
+
+    def calcularPrecioVenta(self, valorArea):
+        self.precioVenta = self.area * valorArea
+        return self.precioVenta
+
+
+    def imprimir(self):
+        print(f"Identificador inmobiliario = {self.identificadorInmobiliario}")
+        print(f"Area = {self.area}")
+        print(f"Direccion = {self.direccion}")
+        print(f"Precio de venta = ${self.precioVenta}")

@@ -1,0 +1,15 @@
+from Apartamento import *
+
+class ApartamentoFamiliar(Apartamento):
+    valorArea = 2000000
+
+
+    def __init__(self, identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos, valorAdministracion):
+        super().__init__(identificadorInmobiliario, area, direccion, numeroHabitaciones, numeroBanos)
+        self.valorAdministracion = valorAdministracion
+
+
+    def imprimir(self):
+        super().imprimir()
+        print(f"Valor de la administracion = ${self.valorAdministracion}")
+        print()

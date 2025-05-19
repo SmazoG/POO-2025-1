@@ -1,0 +1,2 @@
+from GatoPeloCorto import *
+class AzulRuso(GatoPeloCorto): pass

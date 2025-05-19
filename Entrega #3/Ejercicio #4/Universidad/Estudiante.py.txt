@@ -1,0 +1,19 @@
+from Persona import *
+
+class Estudiante(Persona):
+    def __init__(self, nombre, direccion, carrera, semestre):
+        super().__init__(nombre, direccion)
+        self.carrera = carrera
+        self.semestre = semestre
+   
+    def getCarrera(self):
+        return self.carrera
+   
+    def getSemestre(self):
+        return self.semestre
+   
+    def setCarrera(self, carrera):
+        self.carrera = carrera
+   
+    def setSemestre(self, semestre):
+        self.semestre = semestre
